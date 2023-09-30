@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title> Home- UTS Hertz </title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body class="body" style=" background-color: black;">
+        <img src="logo4.png" alt="Home Page: Aryan's Webpage" class="image" style="width:100%">
+        <ul class ="nav">
+            <li class="nav2"><a href="utshertz.html">Home</a></li>
+            <li class="nav2"><a href="home.html">Book a Car</a></li>
+            <li class="nav2"><a href="plan.html">Plan</a></li>
+            <li class="nav2"><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div style="display: flex; flex-direction: row;">
+            <button class="button" style="padding: 6px; width: 100px;" onclick="reversecycleImages()">Previous</button> 
+            <div style="width: 85%;"></div>
+          <button class="button" style="padding: 6px; width: 100px;" onclick="cycleImages()">Next</button>
+          </div>
+        <img src="i4.png" alt="Home Page: Aryan's Webpage" id="homeimage" style="width:100%">
+    </body>
+
+    <footer>
+        <p>&copy; 2023 UTS Hertz. All rights reserved.</p>
+      </footer>
+    <script>
+        var images = ["i1.png", "i3.png", "i4.png"];
+      var index = 0;
+      
+      function cycleImages() {
+        var img = document.getElementById("homeimage");
+        index = (index + 1) % images.length;
+        img.src = images[index];
+      }
+      
+      function reversecycleImages() {
+        var img = document.getElementById("homeimage");
+        index = (index - 1 + images.length) % images.length;
+        img.src = images[index];
+      }
+      
+      </script>
+</html>
