@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Car Rental Booking System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="body" style=" background-color: black; color : white;">
+  <div class="container">
+    
+  <img src="logo4.png" alt="Home Page: Aryan's Webpage" class="image" style="width:100%">
+        <ul class ="nav">
+            <li class="nav2"><a href="utshertz.html">Home</a></li>
+            <li class="nav2"><a href="home.html">Book a Car</a></li>
+            <li class="nav2"><a href="plan.html">Plan</a></li>
+            <li class="nav2"><a href="cart.html">Contact Us</a></li>
+
+        </ul>
+  <h1>Car Rental Booking System</h1>
+  <div class="left-side">
+  <div id="car-list" class="car-container"></div>
+</div>
+ <div class="right-side">
+  <div id="cart">
+    <h2>Cart</h2>
+    <ul id="cart-items" style="list-style-type:none;"></ul>
+    <p id="total-amount">Total Amount: $0</p>
+    <button id="checkout">Checkout</button>
+  </div>
+
+  <div id="checkout-modal" style="display: none;">
+    <h2>Checkout</h2>
+    <div id="checkout-details"></div>
+    <p id="total-amount-modal">Total Amount: $0</p>
+    <!-- <button id="confirm-checkout">Confirm</button> -->
+    <button onclick="openPayment()">Payment</button>
+  </div>
+  </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+function openPayment() {
+  window.location.href ="cart.html";
+}
+
+
+    function Send_Data(){
+      var name=document.getElementById("email").value;
+      var date=document.getElementById("date").value;
+      var amount=document.getElementById("amt").value;
+
+      var httpr=new XMLHttpRequest();
+      httpr.open("POST", "./GET_data.php", true);
+      httpr.onreadystatechange=function(){
+        if(httpr.readyState==4 && httpr.status==200){
+          document.getElementById("response").innerHTML=httpr.responseText;
+        }
+      }
+      httpr.send("email"+email+"&date"+date+"&amt"+amount);
+    }
+  </script>
+  <script>
+    // Check if session storage is supported
+    if (typeof(Storage) !== "undefined") {
+      // Retrieve cart items from session storage
+      var cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+    } else {
+      alert("Your browser does not support session storage. Shopping cart functionality will not work.");
+      var cartItems = [];
+    }
+    // Update the updateCart() function to store cart items in session storage
+    function updateCart() {
+      // Your existing code...
+  
+      // Store cart items in session storage
+      if (typeof(Storage) !== "undefined") {
+        sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
+      }
+    }
+  
+  </script>
+</body>
+</html>

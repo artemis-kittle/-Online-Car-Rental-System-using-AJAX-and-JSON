@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Plan a Road Trip</title>
+  <style>
+    .nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    text-align: center;
+  }
+  .nav2 {
+    display: inline-block;
+    font-size: 20px;
+  }
+  
+  .nav2 a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  .nav2 a:hover {
+    background-color: white;
+    color: black;
+  }
+  .car-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+        body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-right: 10px;
+  color: #fff;
+}
+
+input[type="text"],
+input[type="date"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  background-color: #222;
+  color: #fff;
+}
+
+button[type="submit"] {
+  padding: 5px 10px;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#map {
+  width: 100%;
+  height: 300px;
+  background-color: #222;
+}
+
+.car-images {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.car-images img {
+  width: 150px;
+  margin: 0 10px;
+}
+
+footer {
+  background-color: #222;
+  text-align: center;
+  padding: 10px;
+}
+  </style>
+</head>
+<body>
+    <body class="body" style=" background-color: black;">
+        <img src="logo4.png" alt="Home Page: Aryan's Webpage" class="image" style="width:100%">
+        <ul class ="nav">
+            <li class="nav2"><a href="utshertz.html">Home</a></li>
+            <li class="nav2"><a href="home.html">Book a Car</a></li>
+            <li class="nav2"><a href="plan.html">Plan</a></li>
+            <li class="nav2"><a href="contact.html">Contact Us</a></li>
+        </ul>
+    <h1>Plan a Road Trip</h1>
+
+  <main>
+    <section>
+      <h2>Destination</h2>
+      <form>
+        <label for="destination">Enter your destination:</label>
+        <input type="text" id="destination" name="destination" required>
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Travel Dates</h2>
+      <form>
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date" name="start-date" required>
+
+        <label for="end-date">End Date:</label>
+        <input type="date" id="end-date" name="end-date" required>
+
+        <button type="submit">Save Dates</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Route</h2>
+        <img src="travel.png" style="width:80%" >
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2023 UTS Hertz. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

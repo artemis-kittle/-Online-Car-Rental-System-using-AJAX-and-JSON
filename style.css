@@ -1,0 +1,160 @@
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    text-align: center;
+  }
+  .nav2 {
+    display: inline-block;
+    font-size: 20px;
+  }
+  
+  .nav2 a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  .nav2 a:hover {
+    background-color: white;
+    color: black;
+  }
+  .car-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .car {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+
+  .car img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+
+  button.add-to-cart:disabled {
+    background-color: #424542;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  #cart {
+    margin-top: 20px;
+    text-overflow: clip;
+    
+  }
+
+  #cart h2 {
+    margin-bottom: 10px;
+  }
+
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .cart-item img {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    padding: 1%;
+    /* margin-right: 10px; */
+  }
+
+  .cart-item .days-input {
+    width: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  .cart-item .action-button {
+    background-color: #0f5bfd;
+    color: white;
+    border: none;
+    /* padding: 4px 8px; */
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .cart-item.remove-button {
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  #checkout-details {
+    white-space: pre-wrap;
+  }
+  .container {
+    width: 100%;
+  }
+  
+  .left-side {
+    width: 75%;
+    float: left;
+  }
+  
+  .right-side {
+    width: 25%;
+    float: left;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+  }
+
+  footer {
+    background-color: #222;
+    text-align: center;
+    padding: 10px;
+  }
+  
